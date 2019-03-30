@@ -1,0 +1,16 @@
+y-alarm-rating {
+    font-family: 'Ionicons';
+    font-size: 48px;
+    display: inline-flex;
+
+}
+
+y-alarm-rating > .rating::after{
+    content: '\f3c7';
+    color: #666777;
+}
+
+y-alarm-rating > .rating.full::after{
+    content: '\f3c8';
+    color: #666777;
+}
