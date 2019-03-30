@@ -1,7 +1,44 @@
-.jumbotron {
-    background-image: url("./thecheese.jpg");
+body {
+    font-family: "Segoe UI";
+}
+
+div.darken {
+  outline: 100vmax rgba(0,0,0, 0.9) solid;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  display: block;
+}
+
+
+container.nap-list {
+    margin-top: 50px;
+}
+
+.splash-text.jumbotronic {
+    color: #545050;
+}
+
+.splash-text {
+    color: #545050;
+}
+
+.jumbotron.landing-splash {
+    background-image: url("../img/thecheese.jpg");
     background-size: cover;
     height: 100vh;
+}
+
+.row.nap-spot-body {
+    margin: 0;
+}
+
+.btn.nap-button {
+   margin: 10px;
+}   
+
+.jumbotron-info{
+    background-size: cover; 
+    background-image: url("https://cdn-images.article.com/products/SKU338/2890x1500/image39355.jpg?w=2890");
 }
 
 .navbar {
@@ -33,5 +70,11 @@ body.landing {
 }
 
 .media {
-    overflow: visible ;
+    overflow: visible;
+    padding: 20px;
+}
+
+.profile-image{
+    width: 100px;
+    height: 100px;
 }

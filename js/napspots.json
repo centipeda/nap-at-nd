@@ -2,19 +2,21 @@
     "spots": [
         {
             "name": "Couches 1",
-            "comfort": 1,
+            "comfort": 4,
             "privacy": 1,
-            "busyness": 5,
+            "busyness": 1,
             "nearest": "220",
-            "reviews": 7
+            "reviews": 7,
+            "building": "jordan"
         },
         {
             "name": "Couches 2",
             "comfort": 4,
             "privacy": 2,
-            "busyness": 5,
+            "busyness": 2,
             "nearest": "104",
-            "reviews": 7
+            "reviews": 7,
+            "building": "jordan"
         },
         {
             "name": "Couches 3",
@@ -22,7 +24,8 @@
             "privacy": 4,
             "busyness": 4,
             "nearest": "320",
-            "reviews": 7
+            "reviews": 7,
+            "building": "hesburgh"
         },
         {
             "name": "Couches 4",
@@ -30,15 +33,17 @@
             "privacy": 2,
             "busyness": 5,
             "nearest": "220",
-            "reviews": 7
+            "reviews": 7,
+            "building": "duncan"
         },
         {
             "name": "Couches 5",
             "comfort": 2,
             "privacy": 3,
-            "busyness": 5,
+            "busyness": 3,
             "nearest": "220",
-            "reviews": 7
+            "reviews": 7,
+            "building": "debart"
         }
     ]
 }

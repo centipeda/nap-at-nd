@@ -1,0 +1,83 @@
+#review-modal {
+    margin: 0px auto;
+    padding: 0px;
+  }
+  
+#review-main { 
+    background: #FFFFFF;
+    height: 300px;
+  }
+  
+  #review-modal.content {
+    padding: 10px 44px;
+  }
+  
+  #review-text {
+    border-bottom: 1px solid #262626;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+  #review-text h2 {
+    color: rgb(70, 70, 70);
+    font-size: 40px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: lighter;
+    letter-spacing: 2px;
+  }
+  
+  #review-modal.counter {
+    background: #2C2C2C;
+    -moz-box-shadow:    inset 0 0 5px #000000;
+    -webkit-box-shadow: inset 0 0 5px #000000;
+    box-shadow:         inset 0 0 5px #000000;
+    min-height: 150px;
+    text-align: center;
+  }
+  
+  #review-modal.counter h3 {
+    color: #E5E5E5;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    padding-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  #review-modal.countdown {
+    color: #FFFFFF;
+  }
+  
+  #review-modal.countdown span {
+    color: #E5E5E5;
+    font-size: 26px;
+    font-weight: normal;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  #comments{
+
+    height:50px;
+    font-weight: normal;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    }
+
+    #review-modal.orWord {
+    color: white;
+    
+ }
+
+ #review-modal.powerNap {
+    height: 75px;
+    font-weight: bold;
+    font-size: 24px;
+    
+
+ }

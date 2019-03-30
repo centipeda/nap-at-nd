@@ -19,14 +19,21 @@ function sort() {
         thisData = spotData["spots"][i];
         i += 1;
         s = "#spot-" + i.toString();
-        console.log()
+        console.log();
+        ss = '<x-alarm-rating value="4"></x-alarm-rating>';
         $(element).find(".spot-name").text(thisData.name);
-        $(element).find(".comfort").text("Comfort: " + thisData.comfort);
-        $(element).find(".busyness").text("Current Traffic: " + thisData.busyness);
+        $(element).find(".comfort").html("Comfort: " + xalarm(thisData.comfort));
+        $(element).find(".busyness").html("Traffic: " + xalarm(thisData.busyness));
         $(element).find(".nearest").text("Nearest Room: " + thisData.nearest);
     });
 }
 
+function xalarm(value) {
+    return "<x-alarm-rating value=" + value.toString() + "></x-alarm-rating>";
+}
+
+
+// function to load files
 function xhrSuccess() { 
     this.callback.apply(this, this.arguments); 
 }

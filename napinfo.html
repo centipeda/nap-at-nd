@@ -19,56 +19,192 @@
  
       <!-- Font Awesome Web Icons -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      
+        <link rel="stylesheet" href="css/rating.css"> 
+      <link rel="stylesheet" href="css/main.css">
+      <!--IonIcons-->
+      <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+      <link rel="stylesheet" href="css/timerStyle.css">
+      <link rel="stylesheet" href="css/review.css">
+
  
    </head>
    <body>
+        <div w3-include-html="static/navbar.html"></div>
         <!-- [ This is where your body content will go... ] -->
         <div class="row">
             <div class="col-sm-6">
-                    <span class='center-block label label-info'>Location</span>
+                    <!-- <span class='center-block label label-info'>Location</span>
                 <img class='center-block img img-responsive' src='https://www.livingspaces.com/globalassets/productassets/200000-299999/220000-229999/225000-225999/225800-225899/225899/225899_grey_fabric_sofa_1.jpg?w=446&h=296&mode=pad' alt=''>
-            </div>
+                    -->
+                    <div class="jumbotron" style="background-size: cover; background-image: url(&quot;https://cdn-images.article.com/products/SKU338/2890x1500/image39355.jpg?w=2890&quot;);">
+                        <h1 style="color:#d0e0e3;text-shadow: 1px 1px gray;" class="text-center jumbotronic">Location</h1>
+                        <h6 style=" text-shadow: 1px 1px gray; color:#d0e0e3"></h6>
+                        <p class="text-center">
+                                <!--
+                                <a class="btn btn-info" href="https://google.com" target="_blank" role="button"> <i class="fa fa-fw fa-bed" aria-hidden="true"></i>
+                                        Start Napping!
+                                </a>
+                        -->
+                                <!--triggers naptime modal-->
+                                <a role='button' class="btn btn-info" data-toggle="modal" data-target="#my-modal"><i class="fa fa-fw fa-bed" aria-hidden="true"></i>Start Napping!</a>
+                                       
+                        </p>
+                </div>
+                </div>
 
+                <div class="col-sm-6">
+                        <!--<span class='center-block label label-info'>Map</span>-->
+                        <img class='center-block img img-responsive' src='https://fremantlestuff.info/notredame/img/map.jpg' alt=''>
+                        
+                </div>
+        </div>
+
+        <div class="row" style="height: 5%">
+                <span class='center-block label label-info'>Quick Stats</span>
             <div class="col-sm-6">
-                    <span class='center-block label label-info'>Quick Facts</span>
-                    <!-- <dl class="dl-horizontal">
-                            <dt>Comfort:</dt>
-                            <dd>
-                                3/5
-                            </dd>
-                            <dt>Privacy:</dt>
-                            <dd>
-                                2/5
-                            </dd>
-                            <dt>Distance:</dt>
-                            <dd>.05 km</dd>
-                            <dt>Current Business:</dt>
-                            <dd>Slow</dd>
-                    </dl> -->
-                    <ul class="flex-column">
-                            <li class="flex-item">1</li>
-                            <li class="flex-item">2</li>
-                            <li class="flex-item">3</li>
-                            <li class="flex-item">4</li>
-                            <li class="flex-item">5</li>
-                            <li class="flex-item">6</li>
-                    </ul>
-                    <p class='text-right'><a role='button' class='btn btn-info' href='http://google.com' target='_self'>Nap!</a></p>
+                        <span class='center-block label label-success'>Quality</span>
+                    <p class="comfort">Comfort: <x-alarm-rating value="-1"></x-alarm-rating></p>
+                    <p class="busyness">Current Traffic: <x-alarm-rating value="-1"></x-alarm-rating></p>
+                    <p class="nearest">Privacy: <x-alarm-rating value="-1"></x-alarm-rating></p>
 
+            </div>
+            <div class="col-sm-6">
+                        <span class='center-block label label-warning'>Location</span>
+                        <p class="nearest">Distance: <x-alarm-rating value="-1"></x-alarm-rating></p>
+                        <p class="nearest">Nearest Room: <x-alarm-rating value="-1"></x-alarm-rating></p>
+                        <p class="nearest">Travel Time: <x-alarm-rating value="-1"></x-alarm-rating></p>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-sm-6">
-                    <span class='center-block label label-info'>Stats</span>
-
-            </div>
-            <div class="col-sm-6">
-                    <span class='center-block label label-info'>Map</span>
-                    <img class='center-block img img-responsive' src='https://www.mapsofindia.com/worldmap/map-of-world.jpg' alt=''>
-                    
-            </div>
+                <div class="col-sm-6">
+                        <div id="container-graph" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                </div>
+                <div class="col-sm-6">
+                                <h4 class="text-center">
+                                    Reviews    
+                                </h4>
+                                <div class=row style="border: 10px">
+                                        <div class="col-sm-6">
+                                                        <div class="panel panel-default">
+                                                                        <div class="panel-body">
+                                                                                <img class="profile-image" src="https://www.cobdoglaps.sa.edu.au/wp-content/uploads/2017/11/placeholder-profile-sq.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="panel-footer">User1</div>
+                                                                </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                                <p>
+                                                        Better than my own bed!
+                                                </p>
+                                        </div>
+                                </div>
+                                <div class=row>
+                                                <p class="text-center">
+                                                        <!--triggers review modal-->
+                                                        <a role='button' class="btn btn-default" data-toggle="modal" data-target="#review-modal"><i class="fa fa-fw fa-comment" aria-hidden="true"></i>Rate this spot</a>
+                                                        </p>
+                                </div>
+                        </div>
         </div>
+        
+   <!-- This is the nap select modal -->
+   <div class="modal fade" tabindex="-1" role="dialog" id="my-modal">
+                <div class="modal-dialog" role="document">
+                   <div class="modal-content">
+                      <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                      </div>
+                      <div class="modal-body">
+                            
+                                  <div class="row">
+                                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                  <div id="main">
+                                  <div class="content">
+                                  <div class="text">
+                                  <h2>Set Your Nap Duration</h2>
+                                  </div> <!-- /.Text Div -->
+                                  
+                                  <div class="counter">
+                                     <input class="form-control form-control-lg" id = "numHours" type="text" placeholder="Hours">
+                                     <input class="form-control form-control-lg" id = "numMinutes" type="text" placeholder="Minutes">
+                                     <p class="text-center" id = "orWord"> or </p>
+                                     <button type="button" class="btn btn-primary btn-block" id ="powerNap">20 Minute Moreau Power Nap!</button>
+                                  <div id="countdown"> </div><!-- /#Countdown Div -->
+                                  </div> <!-- /.Counter Div -->
+                                  </div> <!-- /.Content Div -->
+                                  </div> <!-- /#Main Div -->
+                                  </div> <!-- /.Columns Div -->
+                                  </div> <!-- /.Row Div -->
+                               
+                                
+                      </div>
+                      <div class="modal-footer">
+                            <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                  <label class="form-check-label" for="defaultCheck1">
+                                    Track this Nap
+                                  </label>
+                                </div>                    
+                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                         <button type="button" class="btn btn-primary" id = "napButton">Nap!</button>
+                      </div>
+                   </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+             </div><!-- /.modal -->
+
+        <!--Review Modal-->
+        <div class="modal fade" tabindex="-1" role="dialog" id="review-modal">
+                                <div class="modal-dialog" role="document">
+                                   <div class="modal-content">
+                                      <div class="modal-header">
+                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                      </div>
+                                      <div class="modal-body">
+                                            
+                                                  <div class="row">
+                                                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                  <div id="review-main">
+                                                  <div class="content">
+                                                  <div class="text" id=review-text>
+                                                  <h2>Review this location</h2>
+                                                  </div> <!-- /.Text Div -->
+                                                <p class="comfort">Comfort: <x-alarm-rating value="-1" canHighlight="1"></x-alarm-rating></p>
+                                                <p class="busyness">Current Traffic: <x-alarm-rating value="-1" canHighlight="1"></x-alarm-rating></p>
+                                                <p class="nearest">Privacy: <x-alarm-rating value="-1" canHighlight=1></x-alarm-rating></p>
+                                                <input class="form-control form-control-lg" id = "comments" type="text" placeholder="Additional Comments">
+                                                <!--
+                                                <div class="counter">
+                                                
+                                                     <input class="form-control form-control-lg" id = "numMinutes" type="text" placeholder="Review">
+                                                     <input class="form-control form-control-lg" id = "numHours" type="text" placeholder="Minutes">
+                                                     <p class="text-center" id = "orWord"> or </p>
+                                                     <button type="button" class="btn btn-primary btn-block" class ="powerNap">20 Minute Moreau Power Nap!</button>
+                                                  
+                                                  </div> </!-- /.Counter Div -/->
+                                                -->
+                                                  </div> <!-- /.Content Div -->
+                                                  </div> <!-- /#Main Div -->
+                                                  </div> <!-- /.Columns Div -->
+                                                  </div> <!-- /.Row Div -->
+                                               
+                                                
+                                      </div>
+                                      <div class="modal-footer">
+                                            <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                  <label class="form-check-label" for="defaultCheck1">
+                                                    Make this review anonymous
+                                                  </label>
+                                                </div>                    
+                                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                         <button type="button" class="btn btn-primary" id = "napButton">Submit</button>
+                                      </div>
+                                   </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                             </div><!-- /.modal -->
 
 
       <!-- jQuery Javascript Library (required by Bootstrap) -->
@@ -79,6 +215,22 @@
  
       <!-- Bootstrap Library -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+         <!--IonIcons-->
+        <script src="js/rating.js"></script>
+        
+        <!--HighCharts-->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="js/HighChart.js"></script>
+
+        <script src="js/html-include.js"></script>
+        
+        <!--Timer for Nap-->
+   <script src="js/timer.js"></script>
+
+
  
    </body>
 </html>
