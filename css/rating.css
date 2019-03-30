@@ -1,0 +1,16 @@
+x-alarm-rating {
+    font-family: 'Ionicons';
+    font-size: 48px;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+x-alarm-rating > .star::after {
+    content: '\f3c7';
+    color: #777;
+}
+
+x-alarm-rating > .star.full::after {
+    content: '\f3c8';
+    color: #777;
+}

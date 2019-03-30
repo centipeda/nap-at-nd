@@ -1,0 +1,44 @@
+{
+    "spots": [
+        {
+            "name": "Couches 1",
+            "comfort": 1,
+            "privacy": 1,
+            "busyness": 5,
+            "nearest": "220",
+            "reviews": 7
+        },
+        {
+            "name": "Couches 2",
+            "comfort": 4,
+            "privacy": 2,
+            "busyness": 5,
+            "nearest": "104",
+            "reviews": 7
+        },
+        {
+            "name": "Couches 3",
+            "comfort": 5,
+            "privacy": 4,
+            "busyness": 4,
+            "nearest": "320",
+            "reviews": 7
+        },
+        {
+            "name": "Couches 4",
+            "comfort": 7,
+            "privacy": 2,
+            "busyness": 5,
+            "nearest": "220",
+            "reviews": 7
+        },
+        {
+            "name": "Couches 5",
+            "comfort": 2,
+            "privacy": 3,
+            "busyness": 5,
+            "nearest": "220",
+            "reviews": 7
+        }
+    ]
+}
