@@ -62,16 +62,16 @@
         </div>
 
         <div class="row" style="height: 5%">
-                <span class='center-block label label-info'>Quick Stats</span>
+                <span class='center-block label label-info review-label'>Quick Stats</span>
             <div class="col-sm-6">
-                        <span class='center-block label label-success'>Quality</span>
+                        <span class='center-block label label-success review-label'>Quality</span>
                     <p class="comfort">Comfort: <x-alarm-rating value="-1"></x-alarm-rating></p>
                     <p class="busyness">Current Traffic: <x-alarm-rating value="-1"></x-alarm-rating></p>
                     <p class="nearest">Privacy: <x-alarm-rating value="-1"></x-alarm-rating></p>
 
             </div>
             <div class="col-sm-6">
-                        <span class='center-block label label-warning'>Location</span>
+                        <span class='center-block label label-warning review-label'>Location</span>
                         <p class="nearest">Distance: <x-alarm-rating value="-1"></x-alarm-rating></p>
                         <p class="nearest">Nearest Room: <x-alarm-rating value="-1"></x-alarm-rating></p>
                         <p class="nearest">Travel Time: <x-alarm-rating value="-1"></x-alarm-rating></p>
@@ -110,8 +110,8 @@
                         </div>
         </div>
         
-   <!-- This is the nap select modal -->
-   <div class="modal fade" tabindex="-1" role="dialog" id="my-modal">
+      <!-- This is the nap select modal -->
+<div class="modal fade" tabindex="-1" role="dialog" id="my-modal">
                 <div class="modal-dialog" role="document">
                    <div class="modal-content">
                       <div class="modal-header">
@@ -127,13 +127,13 @@
                                   <h2>Set Your Nap Duration</h2>
                                   </div> <!-- /.Text Div -->
                                   
-                                  <div class="counter">
+                                  
                                      <input class="form-control form-control-lg" id = "numHours" type="text" placeholder="Hours">
                                      <input class="form-control form-control-lg" id = "numMinutes" type="text" placeholder="Minutes">
                                      <p class="text-center" id = "orWord"> or </p>
                                      <button type="button" class="btn btn-primary btn-block" id ="powerNap">20 Minute Moreau Power Nap!</button>
-                                  <div id="countdown"> </div><!-- /#Countdown Div -->
-                                  </div> <!-- /.Counter Div -->
+                                  <!-- /#Countdown Div -->
+                                   <!-- /.Counter Div -->
                                   </div> <!-- /.Content Div -->
                                   </div> <!-- /#Main Div -->
                                   </div> <!-- /.Columns Div -->
@@ -141,7 +141,7 @@
                                
                                 
                       </div>
-                      <div class="modal-footer">
+                      <div class="modal-footer" >
                             <div class="form-check">
                                   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                   <label class="form-check-label" for="defaultCheck1">
@@ -154,6 +154,30 @@
                    </div><!-- /.modal-content -->
                 </div><!-- /.modal-dialog -->
              </div><!-- /.modal -->
+          
+        <!--Timer Modal-->
+        <div class="modal fade" tabindex="-1" role="dialog" id="timer-modal">
+                <div class="modal-dialog" role="document">
+                   <div class="modal-content">
+                      <div class="modal-body">
+                         <div class="counter">
+                            <div id="countdown"> </div><!-- /#Countdown Div -->
+                         </div>
+                      </div>
+                      <div class="modal-footer">
+                         <div class="row">
+                            <div class = "col-lg-9 col-md-8 col-sm-7">
+                               <button type="button" class="btn btn-secondary pull-right" id = "pauseButton">Pause Nap</button>
+                            </div>
+                            <div class = "col-lg-2 col-md-4 col-sm-3">
+                               
+                               <button type="button" class="btn btn-danger" id = "endButton">End Nap!</button>
+                            </div>  
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
 
         <!--Review Modal-->
         <div class="modal fade" tabindex="-1" role="dialog" id="review-modal">

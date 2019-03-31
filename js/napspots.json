@@ -1,49 +1,164 @@
 {
     "spots": [
         {
-            "name": "Couches 1",
-            "comfort": 4,
-            "privacy": 1,
-            "busyness": 1,
-            "nearest": "220",
-            "reviews": 7,
-            "building": "jordan"
+            "floor": 2,
+            "nearest": "top of south stairs",
+            "building": "Hesburgh",
+            "privacy_reviews": [2, 2, 3, 2, 1, 2, 3, 2, 2, 2],
+            "comfort_reviews": [3, 3, 3, 2, 2, 2, 2, 2, 2, 2],
+            "noiseLevel_reviews": [4, 4, 4, 3, 4, 4, 2, 3, 4, 4],
+            "times":[15, 14, 16, 16, 13, 10, 13, 13, 10, 14, 15, 17, 16, 13],
+            "picture": "white chair hes.jpg"
         },
         {
-            "name": "Couches 2",
-            "comfort": 4,
-            "privacy": 2,
-            "busyness": 2,
-            "nearest": "104",
-            "reviews": 7,
-            "building": "jordan"
+            "floor": 2,
+            "nearest": "reference section",
+            "building": "Hesburgh",
+            "privacy_reviews": [4, 2, 3, 3, 2, 2, 1, 3, 2, 2],
+            "comfort_reviews": [3, 2, 2, 1, 2, 2, 2, 1, 1, 1],
+            "noiseLevel_reviews": [2, 3, 1, 2, 2, 2, 2, 2, 2, 1],
+            "times":[15, 15, 15, 15, 17, 17, 14, 14, 12, 12, 12, 12, 13, 15, 15, 14, 14],
+            "picture": "2nd floor hes chair.jpg"
         },
         {
-            "name": "Couches 3",
-            "comfort": 5,
-            "privacy": 4,
-            "busyness": 4,
-            "nearest": "320",
-            "reviews": 7,
-            "building": "hesburgh"
+            "floor": 2,
+            "nearest": "235",
+            "building": "Jordan",
+            "privacy_reviews": [4, 3, 3, 3, 4, 4, 3, 2, 3, 3, 3],
+            "comfort_reviews": [1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1],
+            "noiseLevel_reviews": [2, 2, 2, 2, 2, 3, 3, 2, 3, 2, 2],
+            "times":[10, 11, 10, 12, 13, 9, 10, 12, 18, 19, 13],
+            "picture": "2nd floor jordan wooden bench.jpg"
         },
         {
-            "name": "Couches 4",
-            "comfort": 7,
-            "privacy": 2,
-            "busyness": 5,
-            "nearest": "220",
-            "reviews": 7,
-            "building": "duncan"
+            "floor": 1,
+            "nearest": "Fishbowl",
+            "privacy_reviews": [3, 3, 3, 3, 3, 4, 4, 3, 4, 3, 5, 3, 4],
+            "comfort_reviews": [3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3],
+            "noiseLevel_reviews": [3, 3, 2, 2, 2, 2, 2, 4, 3, 2, 2, 3, 4],
+            "building": "Hesburgh",
+            "times":[18, 18, 18, 19, 19, 14, 15, 16, 12, 13, 13, 18, 18],
+            "picture": "fishbowl couch.jpg"
         },
         {
-            "name": "Couches 5",
-            "comfort": 2,
-            "privacy": 3,
-            "busyness": 3,
-            "nearest": "220",
-            "reviews": 7,
-            "building": "debart"
+            "floor": 2,
+            "nearest": "219/Piano",
+            "privacy_reviews": [1, 2, 2, 2, 1, 1, 1, 2, 1, 1, 2, 1],
+            "comfort_reviews": [5, 5, 5, 5, 5, 5, 4, 4, 5, 5, 3, 5],
+            "noiseLevel_reviews": [4, 4, 4, 2, 2, 2, 3, 3, 3, 2],
+            "building": "Jordan",
+            "times":[10, 10, 10, 10, 10, 11, 11, 11, 14, 14, 14, 14, 12, 13, 9, 14, 14, 10, 10, 10, 13, 13, 10, 9, 9],
+            "picture": "2nd floor jordan couches.jpg"
+        },
+        {
+            "floor": 1,
+            "nearest": "A la Descartes",
+            "privacy_reviews": [2, 1, 1, 2, 2, 1, 2, 2, 2, 1],
+            "comfort_reviews": [1, 1, 1, 2 ,1, 2, 2, 2, 1, 2],
+            "noiseLevel_reviews": [3, 3, 2, 2, 4, 3, 4, 2, 4],
+            "building": "Jordan",
+            "times":[10, 11, 12, 12, 13, 13, 13, 14, 14, 15, 15, 16, 17],
+            "picture": "1st floor jordan chairs.jpg"
+        },
+        {
+            "floor": 1,
+            "nearest": "Hagerty Family Cafe",
+            "privacy_reviews": [2, 1, 1, 2, 2, 1, 2, 2, 2, 1],
+            "comfort_reviews": [2, 2, 3, 3, 2, 2, 2, 2, 2, 2],
+            "noiseLevel_reviews": [4, 4, 4, 5, 4, 5, 4, 4, 5, 3],
+            "building": "Duncan",
+            "times":[13, 13, 13, 14, 14, 14, 14, 14, 15, 15, 15, 15, 16, 15, 15, 14, 14, 16, 16, 17],
+            "picture": "1st floor duncan gray couch.jpg"
+        },
+        {
+            "floor": 1,
+            "nearest": "106",
+            "privacy_reviews": [2, 2, 3, 2, 1, 2, 3, 2, 4, 2],
+            "comfort_reviews": [1, 2, 2, 2, 3, 2, 3, 2, 2, 2],
+            "noiseLevelreviews": [2, 2, 5, 5, 4, 3, 5, 5, 4, 3, 5, 5, 2, 2, 2, 2],
+            "building": "Duncan",
+            "times":[10, 10, 11, 12, 13, 13, 13, 14, 14, 14, 15, 16, 16, 19],
+            "picture": "1st floor duncan blue chairs.jpg"
+        },
+        {
+            "floor": 1,
+            "nearest": "Welcome Desk",
+            "privacy_reviews": [2, 1, 1, 2, 2, 1, 2, 2, 2, 1],
+            "comfort_reviews": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+            "noiseLevelreviews": [3, 3, 4, 3, 4, 4, 3, 2, 3, 3, 3],
+            "building": "Duncan",
+            "times":[10, 12, 16, 16, 17, 14, 16, 14, 14, 15, 20],
+            "picture": "1st floor duncan booth.jpg"
+        },
+        {
+            "floor": 1,
+            "nearest": "Star Ginger",
+            "privacy_reviews": [2, 3, 3, 2, 2, 4, 3, 2, 2, 3],
+            "comfort_reviews": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+            "noiseLeveleviews": [3, 4, 4, 3, 3, 2, 2, 4, 3, 3],
+            "building": "Duncan",
+            "times":[17, 17, 17, 16, 16, 16, 15, 14, 15, 15, 16, 16, 15, 15, 15, 15, 15],
+            "picture": "1st floor duncan gray chairs.jpg"
+        },
+        {
+            "floor": 2,
+            "nearest": "W210",
+            "privacy_reviews": [2, 1, 1, 2, 2, 1, 2, 2, 2, 1],
+            "comfort_reviews": [2, 3, 3, 2, 3, 3, 1, 4, 3, 3],
+            "noiseLevel_reviews": [1, 2, 2, 2, 2, 1, 1, 2, 2, 4, 4, 2, 1],
+            "building": "Duncan",
+            "times":[16, 10, 12, 12, 12, 12, 15, 20, 20, 19, 20, 13, 14],
+            "picture": "2nd floor duncan chairs.jpg"
+        },
+        {
+            "floor": 2,
+            "nearest": "W231",
+            "privacy_reviews": [4, 4, 4, 4, 4, 4, 3, 3, 4, 5],
+            "comfort_reviews": [4, 4, 4, 3, 4, 3, 3, 4, 3, 4],
+            "noiseLevel_reviews": [3, 3, 3, 3, 2, 3, 3, 4, 3],
+            "building": "Duncan",
+            "times":[10, 11, 16, 20, 13, 15, 15, 15, 14],
+            "picture": "2nd floor duncan pods.jpg"
+        },
+        {
+            "floor": 2,
+            "nearest": "W228",
+            "privacy_reviews": [4, 3, 3, 2, 2, 2, 3, 2, 3, 2],
+            "comfort_reviews": [4, 4, 4, 3, 4, 3, 3, 2, 3, 3],
+            "noiseLevel_reviews": [1, 1, 2, 2, 2, 4, 2, 3, 3, 2, 2, 2, 2],
+            "building": "Duncan",
+            "times":[10, 10, 11, 19, 18, 12, 13, 12, 12, 12, 13, 15, 15, 15, 14],
+            "picture": "2nd floor duncan flat couches.jpg"
+        },
+        {
+            "floor": 2,
+            "nearest": "pool table",
+            "privacy_reviews": [3, 3, 2, 3, 3, 3, 2, 2, 2, 2],
+            "comfort_reviews": [1, 1, 1, 1, 1, 2, 2, 2, 2, 1],
+            "noiseLevelreviews": [2, 2, 3, 3, 3, 2, 3, 3, 3, 3],
+            "building": "Duncan",
+            "times":[9, 10, 11, 13, 15, 20, 19, 18, 17, 12],
+            "picture": "2nd floor duncan blue couches.jpg"
+        },
+        {
+            "floor": 1,
+            "nearest": "Welcome Desk",
+            "privacy_reviews": [2, 2, 1, 1, 1, 2, 1, 2, 1, 1],
+            "comfort_reviews": [2, 2, 3, 3, 3, 2, 3, 3, 3, 3],
+            "noiseLevelreviews": [4, 4, 4, 3, 3, 3, 3, 4, 2, 2, 2, 2],
+            "building": "Duncan",
+            "times":[12, 12, 12, 13, 13, 14, 15, 11, 16, 17, 18, 19],
+            "picture": "first floor duncan big couch.jpg"
+        },
+        {
+            "floor": 2,
+            "nearest": "outside of reference section",
+            "privacy_reviews": [1, 2, 3, 2, 2, 2, 2, 1, 2, 2],
+            "comfort_reviews": [2, 2, 3, 3, 3, 2, 3, 3, 3, 3],
+            "noiseLevel_reviews": [2, 2, 2, 2, 2, 2, 2, 3, 2, 1, 4, 2, 2, 3],
+            "building": "Hesburgh",
+            "times":[19, 18, 18, 14, 14, 14, 14, 12, 12, 13, 14, 12, 15, 12],
+            "picture": "2nd floor hes leather-ish chairs.jpg"
         }
     ]
 }

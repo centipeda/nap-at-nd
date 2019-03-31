@@ -33,27 +33,52 @@
    <div w3-include-html="static/navbar.html"></div>
    <div class = "container-fluid nap-list">
       <div class = "row vertical-align">
-         <div class = "col-lg-offset-1 col-lg-12 col-md-12 col-sm-12">
+         <div class = "col-lg-offset-1 col-lg-12 col-md-12 col-sm-12"> <!-- top of page -->
             <h2>Recommended Napping Spots</h2>
             <div class="row">
                <div class = "col-lg-12 col-md-12 col-sm-12">
                   <div class="form-inline">
                      <div class="form-group">
+                     <!--
                      <div class="dropdown">
                         <button id="change-preferences" type='button' data-toggle='dropdown' class='btn btn-default dropdown-toggle'>
                            Sort Nap Spots By
                            <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                           <li><a role="button" href="#">Privacy</a></li>
-                           <li><a role="button" href="#">Comfort</a></li>
-                           <li><a role="button" href="#">Distance</a></li>
+                           <li><a role="button" id="Privacy-button" href="#">Privacy</a></li>
+                           <li><a role="button" id="Comfort-button"href="#">Comfort</a></li>
+                           <li><a role="button" id="Noise-button"href="#">Noise</a></li>
                         </ul>
-                     </div>
+                     </div> -->
+                     
+                     
+                     <!--dropdown which stays selected-->
+                     <div class="dropdown">
+                           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                             Sort by
+                             <span class="caret"></span>
+                           </button>
+                           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                             <li ><a href="#" data-value="comfort">Comfort</a></li>
+                             <li ><a href="#" onclick="displayPrivacy" data-value="privacy">Privacy</a></li>
+                             <li ><a href="#" data-value="noise">Noise</a></li>
+                           </ul>
+                         </div>
+                        
 
+                        <!--
+                        <select class="browser-default custom-select">
+                              <option disabled selected>Sort by</option>
+                              <option value="1">Comfort</option>
+                              <option value="2">Privacy</option>
+                              <option value="3">Noise</option>
+                            </select>
                      </div>
+                     -->
                      <input type="search" class="form-control">
                      <button class="btn btn-default" type="submit">Search</button>
+                     <a class="btn btn-link" data-target="#new-spot-form" data-toggle="modal" type="button">Don't see your favorite nap spot? Add it here!</a>
                   </div>
                </div>
             </div>
@@ -61,13 +86,14 @@
       </div>
 
       <div class="row">
-         <div class="col-md-4 col-sm-3 col-md-offset-3 ">
+        <div id="media-holder" class="col-md-4 col-sm-3 col-md-offset-3 ">
+            <!---
             <div class="media" id="spot-1">
                      <div class="media-left">
                         <a href="">
                            <img class="media-object" src="http://www.placehold.it/100x100" alt="">
                               <p class='text-center'>
-                                 <a role='button' class="nap-button btn btn-sm btn-default">
+                         <a role='button' class="nap-button btn btn-sm btn-default" data-toggle="modal" data-target="#my-modal">
                                  Start a Nap</a>
                               </p>
                         </a>
@@ -88,10 +114,10 @@
                   </a>
                </div>
                <div class="media-body">
-                     <!-- <x-star-rating value="2" number="5"></x-star-rating> -->
+                     </!-- <x-star-rating value="2" number="5"></x-star-rating> -/->
                         <div class="media-body">
                            <h4 class="media-heading spot-name">Media heading</h4>
-                           <!-- <x-star-rating value="2" number="5"></x-star-rating> -->
+                           </!-- <x-star-rating value="2" number="5"></x-star-rating> -/->
                            <p class="comfort">Comfort</p>
                            <p class="busyness">Current Traffic</p>
                            <p class="nearest">Nearest Room</p>
@@ -107,7 +133,7 @@
                   </div>
                         <div class="media-body">
                            <h4 class="media-heading spot-name">Media heading</h4>
-                           <!-- <x-star-rating value="2" number="5"></x-star-rating> -->
+                           <!/-- <x-star-rating value="2" number="5"></x-star-rating> -/->
                            <p class="comfort">Comfort</p>
                            <p class="busyness">Current Traffic</p>
                            <p class="nearest">Nearest Room</p>
@@ -122,7 +148,7 @@
                   </div>
                         <div class="media-body">
                            <h4 class="media-heading spot-name">Media heading</h4>
-                           <!-- <x-star-rating value="2" number="5"></x-star-rating> -->
+                           </!-- <x-star-rating value="2" number="5"></x-star-rating> -/->
                            <p class="comfort">Comfort</p>
                            <p class="busyness">Current Traffic</p>
                            <p class="nearest">Nearest Room</p>
@@ -137,13 +163,15 @@
                   </div>
                         <div class="media-body">
                            <h4 class="media-heading spot-name">Media heading</h4>
-                           <!-- <x-star-rating value="2" number="5"></x-star-rating> -->
+                           <!-/- <x-star-rating value="2" number="5"></x-star-rating> -/->
                            <p class="comfort">Comfort</p>
                            <p class="busyness">Current Traffic</p>
                            <p class="nearest">Nearest Room</p>
                         </div>
                </div>
-      </div>
+
+            -->
+      </div> <!--Media holder-->
 
          </div>
    </div> <!-- main container div -->
@@ -165,13 +193,13 @@
                         <h2>Set Your Nap Duration</h2>
                         </div> <!-- /.Text Div -->
                         
-                        <div class="counter">
+                        
                            <input class="form-control form-control-lg" id = "numHours" type="text" placeholder="Hours">
                            <input class="form-control form-control-lg" id = "numMinutes" type="text" placeholder="Minutes">
                            <p class="text-center" id = "orWord"> or </p>
                            <button type="button" class="btn btn-primary btn-block" id ="powerNap">20 Minute Moreau Power Nap!</button>
-                        <div id="countdown"> </div><!-- /#Countdown Div -->
-                        </div> <!-- /.Counter Div -->
+                        <!-- /#Countdown Div -->
+                         <!-- /.Counter Div -->
                         </div> <!-- /.Content Div -->
                         </div> <!-- /#Main Div -->
                         </div> <!-- /.Columns Div -->
@@ -197,13 +225,80 @@
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-body">
-               <div id="countdown"> </div><!-- /#Countdown Div -->
+               <div class="counter">
+                  <div id="countdown"> </div><!-- /#Countdown Div -->
+               </div>
+            </div>
+            <div class="modal-footer">
+               <div class="row">
+                  <div class = "col-lg-9 col-md-8 col-sm-7">
+                     <button type="button" class="btn btn-secondary pull-right" id = "pauseButton">Pause Nap</button>
+                  </div>
+                  <div class = "col-lg-2 col-md-4 col-sm-3">
+                     
+                     <button type="button" class="btn btn-danger" id = "endButton">End Nap!</button>
+                  </div>  
+               </div>
             </div>
          </div>
       </div>
-   </div> 
+   </div>
 
+   <div class="modal fade" tabindex="-1" role="dialog" id="modal-34698011">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+			</div>
+		</div>
+	</div>
+</div>
 
+<div class="modal fade" tabindex="-1" role="dialog" id="new-spot-form"> <!-- form for stuff -->
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<h4 class="modal-title">Submit New Nap Spot</h4>
+			</div>
+			<div class="modal-body" id="nap-form-body">
+            <form id="nap-form">
+               <div class="form-group">
+                  <label for="building">Building</label>
+                  <input type="text" class="form-control" id="building-input" placeholder="Building">
+               </div>
+               <div class="form-group">
+                  <label for="floor">Floor</label>
+                  <input type="text" class="form-control" id="floor-input" placeholder="Floor">
+               </div>
+               <div class="form-group">
+                  <label for="picture">Photos</label>
+                  <input type="file" id="picture-input">
+                  <p class="help-block">Upload picture of the nap spot and its surrounding area.</p>
+               </div>
+               <div class="form-group">
+                  <label for="rating">Privacy</label>
+                  <h5 class="text-center">
+                     Less Private  <x-alarm-rating class="entry-form" value="0" canHighlight="1"></x-alarm-rating>  More Private
+                  </h5>
+               </div>
+               <div class="form-group">
+                  <label for="rating">Comfort</label>
+                  <h5 class="text-center">
+                     Less Comfortable  <x-alarm-rating class="entry-form" value="0" canHighlight="1"></x-alarm-rating>  More Comfortable
+                  </h5>
+               </div>
+               <button type="submit" id="new-spot-btn" class="btn btn-default">Submit</button>
+            </form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
    <!-- jQuery Javascript Library (required by Bootstrap) -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -226,5 +321,7 @@
    <!--Timer for Nap-->
    <script src="js/timer.js"></script>
 
+   <!-- Script for controlling user submission -->
+   <script src="js/submitForm.js"></script>
 </body>
 </html>

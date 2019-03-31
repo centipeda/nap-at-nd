@@ -5,6 +5,10 @@ x-alarm-rating {
     cursor: pointer;
 }
 
+x-alarm-rating.entry-form {
+    font-size: 40px;
+}
+
 x-alarm-rating > .star::after {
     content: '\f3c7';
     color: #777;

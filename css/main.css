@@ -23,7 +23,7 @@ container.nap-list {
 }
 
 .jumbotron.landing-splash {
-    background-image: url("../img/thecheese.jpg");
+    background-image: url("../img/homepage.png");
     background-size: cover;
     height: 100vh;
 }
@@ -51,7 +51,7 @@ container.nap-list {
 }
 
 .top-spaced {
-    margin-top: 120px;
+    margin-top: 230px;
 }
 
 body.landing {
@@ -77,4 +77,9 @@ body.landing {
 .profile-image{
     width: 100px;
     height: 100px;
+}
+
+.vertical-center-txt {
+    display: inline-block;
+    vertical-align: middle;
 }
