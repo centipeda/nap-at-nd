@@ -95,6 +95,5 @@ document.addEventListener("click", function (e) {
 });
 }
 
-var locations = ["Hesburgh Library", "Jordan Hall of Science", "Debartolo Hall",
-                 "Eck Hall of Law", "LaFortune Student Center", "Duncan Student Center"];
+var locations = ["Hesburgh Library", "Jordan Hall of Science", "Duncan Student Center"];
 autocomplete(document.getElementById("locationsearch"), locations);

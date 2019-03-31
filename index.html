@@ -27,14 +27,14 @@
 
    </head>
    <body class="landing">
-    <div w3-include-html="static/navbar.html"></div>
+    <!-- <div w3-include-html="static/navbar.html"></div> -->
     <div class="jumbotron landing-splash" style="background-size: cover;">
         <div class="container">
             
 
             <div class="row top-spaced">
                 <div class = "col-lg-offset-3 col-lg-6 col-md-12 col-sm-12">
-                    <a href="naplist.html"> <button type="button" class="btn btn-default btn-lg btn-block" >Nap!</button></a>
+                    <a href="naplist.html" id="big-nap-button" class="btn btn-default btn-lg btn-block" >View All Nap Locations</a>
                 </div>
             </div>
             <div class="row">
@@ -44,10 +44,10 @@
             </div>
             <div class="row">
                 <div class="col-lg-offset-3 col-lg-6 col-md-12 col-sm-12">
-                    <form autocomplete="off" action="#">
+                    <form autocomplete="off" id="building-select" action="naplist.html">
                         <div class="input-group">
                             <div class="autocomplete">
-                                <input id="locationsearch"type="text" class="form-control" placeholder="Find nap locations near...">
+                                <input id="locationsearch" type="text" class="form-control" placeholder="Find nap locations near...">
                             </div>
                             <span class="input-group-btn">
                                 <button class="btn btn-default" type="submit">Nap!</button>
@@ -61,11 +61,11 @@
 
     <div class="footer navbar-fixed-bottom">
         <div class="container">
-            <div class="row">
+            <div class="row nap-fact">
                 <div class="col-3 col-offset-4">
-                    <p>
+                    <h4 class=>
                         <i>Nap Fact!</i> <span id="myQuote">NAP FACT</span>
-                    </p>
+                    </h4>
                 </div>
             </div>
         </div>
@@ -88,5 +88,17 @@
     <!--Nap Facts-->
     <script src="js/napfacts.js"></script>
 
+    <script>
+        $("#building-select").submit(function(e) {
+            var building = $("#locationsearch")[0].value.split(" ")[0].toLowerCase();
+            localStorage.setItem("build-filter", building);
+            console.log("opening");
+        });
+
+        $("#big-nap-button").click(function(e) {
+            localStorage.setItem("build-filter", "none");
+        })
+        
+    </script>
    </body>
 </html>

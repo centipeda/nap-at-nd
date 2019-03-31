@@ -4,7 +4,7 @@ Highcharts.chart('container-graph', {
         type: 'column'
     },
     title: {
-        text: 'Hourly Average Traffic'
+        text: 'Hourly Traffic'
     },
     /*subtitle: {
         text: 'Source: WorldClimate.com'
@@ -51,11 +51,8 @@ Highcharts.chart('container-graph', {
         }
     },
     series: [{
-        name: 'Foot Traffic',
-        data: [1, 6, 3, 8, 0, 4, 7, 3, 8, 2, 2, 5, 4, 7, 3]
+        name: 'Noise Level (average)',
+        data: [1, 0, 0, 2, 2, 3, 2, 2, 4, 3, 3, 2, 0, 1, 0]
 
-    }, {
-        name: 'Usage',
-        data: [6, 9, 4, 6, 2, 7, 9, 5, 7, 4, 3, 6, 7, 3, 5]
-			}]
+    }]
 });

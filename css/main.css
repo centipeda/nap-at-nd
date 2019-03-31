@@ -2,6 +2,16 @@ body {
     font-family: "Segoe UI";
 }
 
+#spot-image {
+    margin-bottom: 0;
+    background-position: 50% 50%;
+}
+
+.nd-colored {
+    color: #0C2340;
+}
+
+
 div.darken {
   outline: 100vmax rgba(0,0,0, 0.9) solid;
   -webkit-transition: 1s all;
@@ -9,9 +19,34 @@ div.darken {
   display: block;
 }
 
+.center-caption {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    width:100%;
+}
+
+.no-margin{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.review-label {
+    background-color: #a0a0a0;
+}
+
+.media-object {
+    width: 300px;
+}
+
+.nap-fact {
+    margin-bottom: 50px;
+}
 
 container.nap-list {
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .splash-text.jumbotronic {
@@ -82,4 +117,38 @@ body.landing {
 .vertical-center-txt {
     display: inline-block;
     vertical-align: middle;
+}
+
+.nav-brand {
+    height: 50px;
+    line-height: 50px;
+}
+/*
+#comfortRating {
+    font-style: bold;
+    font-size: 14px;
+
+}
+
+#privacyRating {
+    font-style: bold;
+    font-size: 14px;
+
+}
+
+#noiseRating {
+    font-style: bold;
+    font-size: 14px;
+
+}
+*/
+
+.main-stat{
+    font-style: bold;
+    font-size: 20px;
+}
+
+.review{
+    border: 20px;
+    border-color: #0C2340;
 }

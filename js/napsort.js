@@ -1,20 +1,50 @@
 $(document).ready(function() {
-    loadFile("js/napspots.json", storeNapData);
+    loadFile("js/napspots.json", main);
 });
 
-function storeNapData() {
-    spotData = JSON.parse(this.responseText);
+function main() {
+    fullSpotData = JSON.parse(this.responseText).spots;
+    buildFilter = localStorage.getItem("build-filter");
+    console.log(fullSpotData);
+    console.log(buildFilter);
+    if(buildFilter != "none") {
+        var spotData = fullSpotData.filter(function(v, i, a) {
+            return v.building.toLowerCase() == buildFilter;
+        });
+        loc = {
+            "hesburgh": "Hesburgh Library",
+            "duncan": "Duncan Student Center",
+            "jordan": "Jordan Hall of Science"
+        };
+        $("#building-dropdown").html(loc[buildFilter] + " <span class='caret'></span>");
+    } else {
+        var spotData = fullSpotData.slice();
+    }
     displayData(spotData);
+    $("#sort-button").click(function(e) {
+        console.log(fullSpotData);
+        spotData = fullSpotData;
+        buildFilter = $("#building-dropdown").val();
+        if(buildFilter != "none" && buildFilter != "") {
+            spotData = fullSpotData.filter(function(v, i, a) {
+                return v.building.toLowerCase() == buildFilter;
+            });
+        } else {
+            spotData = fullSpotData.slice();
+        }
+        var drop = $("#sort-dropdown").val();
+        if(drop == "comfort") {
+            spotData.sort(SortByComfort);
+        } else if(drop == "privacy") {
+            spotData.sort(SortByPrivacy);
+        } else if(drop == "noise") {
+            spotData.sort(SortByNoise);
+        }
+        displayData(spotData);
+    });
 }
+    
 
-// From sortBy
-$("#comfort").click(function(e) {
-    console.log("click");
-    //storeNapData();
-    spotData = JSON.parse(this.responseText);
-    spotData.sort(SortByComfort);
-    displayData(spotData);
-});
 
 function displayPrivacy() {
     alert("ALERT");
@@ -65,11 +95,11 @@ function averageNoise(x){
 }
 
   function SortByPrivacy(x,y) {
-    return ((averagePrivacy(x) == averagePrivacy(y)) ? 0 : ((averagePrivacy(x) > averagePrivacy(y)) ? 1 : -1 ));
+    return ((averagePrivacy(x) == averagePrivacy(   y)) ? 0 : ((averagePrivacy(x) > averagePrivacy(y)) ? -1 : 1 ));
   }
 
   function SortByComfort(x,y) {
-    return ((averageComfort(x) == averageComfort(y)) ? 0 : ((averageComfort(x) > averageComfort(y)) ? 1 : -1 ));
+    return ((averageComfort(x) == averageComfort(y)) ? 0 : ((averageComfort(x) > averageComfort(y)) ? -1 : 1 ));
   }
 
   function SortByNoise(x,y) {
@@ -78,28 +108,50 @@ function averageNoise(x){
 
 function displayData(spotData) {
     var mediaContainer = $("#media-holder");
+    mediaContainer.empty();
     for(var i=0;i<spotData.length;i++){
-        before = '<div class="media" id='
-        id = spotData[i].building+"-floor-" +spotData[i].floor+ "-near-"+spotData[i].nearest;
-        before+=id;
-        before+= '<div class="media-left"> <a href=""> <img class="media-object" src=';
+        before = '<div style="width: 1000px" class="media"'; //id='
+        // id = spotData[i].building+"-floor-" +spotData[i].floor+ "-near-"+spotData[i].nearest; 
+         id=spotData[i].index; 
+        // before+=id;
+        before+= '><div class="media-left"> <a href=""> <img id="' + id +  '" class="picture media-object" src=img/';
         before+=spotData[i].picture;
-        before+= 'alt=""> <p class="text-center"> <a role="button" class="nap-button btn btn-sm btn-default" data-toggle="modal" data-target="#my-modal"> Start a Nap</a> </p> </a> </div> <div class="media-body"> <h4 class="media-heading spot-name">';
-        name = spotData[i].building+", floor " +spotData[i].floor+ "; near "+spotData[i].nearest;
+        before+= ' alt=""> <p class="text-center"> <a role="button" class="nap-button btn btn-sm btn-default" data-toggle="modal" data-target="#my-modal"> Start a Nap</a> </p> </a> </div> <div class="media-body"> <h4 class="media-heading spot-name">';
+        //name = "<a spotData[i].building+"+ spotData[i].floor +" +spotData[i].floor+ "+ spotData[i].near +"+spotData[i].nearest </a>";
+        name = ''+spotData[i].building + ', Floor '+spotData[i].floor+'; Near '+spotData[i].nearest;
         before+=name;
-        before+='</h4> <p class="comfort">Comfort ';
-        xAlarmComfort='';
-        xAlarmPrivacy='';
-        xAlarmNoise='';
+        before+='</h4> <p class="comfort">Comfort: ';
+        comfort=Math.round(averageComfort(spotData[i]));
+        privacy=Math.round(averagePrivacy(spotData[i]));
+        noise=Math.round(averageNoise(spotData[i]));
+        xAlarmComfort= xalarm(comfort);
+        xAlarmPrivacy= xalarm(privacy);
+        xAlarmNoise= xalarm(noise);
         before+=xAlarmComfort;
         before+='</p> <p class="privacy">Privacy: ';
         before+=xAlarmPrivacy;
         before+='</p> <p class="noise">Noise: ';
         before+=xAlarmNoise;
-        before+='</p> </div> </div>';
+        before+='</p>';
+        //before+='<p> ' + spotData[i].building + ' </p>';
+        before+='</div> </div>';
 
         mediaContainer.append(before);
+        $(".picture").click(function () {
+            var contentPanelId = jQuery(this).attr("id");
+            // var contentPanelClass = jQuery(this).attr("class");
+            //if(contentPanelClass != 'nap-button'){
+            console.log(contentPanelId);
+            localStorage.setItem("spotID", contentPanelId);
+            window.open('napinfo.html');
+            //}
+        }); 
+        
+        // mediaContainer.find(".comfort").find("x-star-rating")[i];
 }
+
+
+    
     /*
     $(".media").each(function(i, element) {
         thisData = spotData["spots"][i];

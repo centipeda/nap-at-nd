@@ -55,9 +55,15 @@ function startNap(event) {
         seconds_left--;   
         console.log(seconds_left);
 
-        if(seconds_left <= 0) {
+        if(seconds_left <= 1) {
             clearInterval(interval)
             $("#countdown").removeClass("darken");
+            $("#timer-modal").modal("hide");
+            $("#timer-modal").on('hidden.bs.modal', function() {
+              $("#finish-modal").modal("show");
+              
+              
+            });
         }
 
       if(isPaused == true) {
@@ -105,6 +111,9 @@ function startNap(event) {
     }
 
 }
+
+
+  
 
 
 function sleep(milliseconds) {

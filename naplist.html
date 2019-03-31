@@ -39,33 +39,45 @@
                <div class = "col-lg-12 col-md-12 col-sm-12">
                   <div class="form-inline">
                      <div class="form-group">
-                     <!--
-                     <div class="dropdown">
-                        <button id="change-preferences" type='button' data-toggle='dropdown' class='btn btn-default dropdown-toggle'>
-                           Sort Nap Spots By
-                           <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                           <li><a role="button" id="Privacy-button" href="#">Privacy</a></li>
-                           <li><a role="button" id="Comfort-button"href="#">Comfort</a></li>
-                           <li><a role="button" id="Noise-button"href="#">Noise</a></li>
-                        </ul>
-                     </div> -->
-                     
                      
                      <!--dropdown which stays selected-->
                      <div class="dropdown">
-                           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                           <button id="sort-dropdown" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                              Sort by
                              <span class="caret"></span>
                            </button>
-                           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                           <ul class="dropdown-menu" aria-labelledby="sort-dropdown">
                              <li ><a href="#" data-value="comfort">Comfort</a></li>
-                             <li ><a href="#" onclick="displayPrivacy" data-value="privacy">Privacy</a></li>
+                             <li ><a href="#" data-value="privacy">Privacy</a></li>
                              <li ><a href="#" data-value="noise">Noise</a></li>
                            </ul>
-                         </div>
-                        
+                     </div>
+                     </div>
+
+                     <div class="form-group">
+                     
+                     <!--dropdown which stays selected-->
+                     <div class="dropdown">
+                           <button id="building-dropdown" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                             All
+                             <span class="caret"></span>
+                           </button>
+                           <ul class="dropdown-menu" aria-labelledby="sort-dropdown">
+                             <li ><a href="#" data-value="none">All</a></li>
+                             <li ><a href="#" data-value="hesburgh">Hesburgh Library</a></li>
+                             <li ><a href="#" data-value="duncan">Duncan Student Center</a></li>
+                             <li ><a href="#" data-value="jordan">Jordan Hall of Science</a></li>
+                           </ul>
+                     </div>
+                     </div>
+                     <div class="form-group">
+                           <a id="sort-button" role="button" class="btn btn-default" target="_blank">
+                              <i class="fa fa-fw fa-sort-amount-desc" aria-hidden="true"></i>
+                              Sort
+                           </a>
+                     <a class="btn btn-link" data-target="#new-spot-form" data-toggle="modal" type="button">Don't see your favorite nap spot? Add it here!</a>
+                     </div>
+
 
                         <!--
                         <select class="browser-default custom-select">
@@ -74,11 +86,8 @@
                               <option value="2">Privacy</option>
                               <option value="3">Noise</option>
                             </select>
-                     </div>
                      -->
-                     <input type="search" class="form-control">
-                     <button class="btn btn-default" type="submit">Search</button>
-                     <a class="btn btn-link" data-target="#new-spot-form" data-toggle="modal" type="button">Don't see your favorite nap spot? Add it here!</a>
+                     </div>
                   </div>
                </div>
             </div>
@@ -86,94 +95,8 @@
       </div>
 
       <div class="row">
-        <div id="media-holder" class="col-md-4 col-sm-3 col-md-offset-3 ">
-            <!---
-            <div class="media" id="spot-1">
-                     <div class="media-left">
-                        <a href="">
-                           <img class="media-object" src="http://www.placehold.it/100x100" alt="">
-                              <p class='text-center'>
-                         <a role='button' class="nap-button btn btn-sm btn-default" data-toggle="modal" data-target="#my-modal">
-                                 Start a Nap</a>
-                              </p>
-                        </a>
-                        
-                     </div>
-                     <div class="media-body">
-                        <h4 class="media-heading spot-name">Spot Name</h4>
-                        <p class="comfort">Comfort: <x-alarm-rating value="4"></x-alarm-rating></p>
-                        <p class="busyness">Current Traffic: <x-alarm-rating value="-1"></x-alarm-rating></p>
-                        <p class="nearest">Nearest Room: <x-alarm-rating value="-1"></x-alarm-rating></p>
-                     </div>
-            </div>
-                  
-            <div class="media" id="spot-2">
-               <div class="media-left">
-                  <a href="">
-                     <img class="media-object" src="http://www.placehold.it/100x100" alt="">
-                  </a>
-               </div>
-               <div class="media-body">
-                     </!-- <x-star-rating value="2" number="5"></x-star-rating> -/->
-                        <div class="media-body">
-                           <h4 class="media-heading spot-name">Media heading</h4>
-                           </!-- <x-star-rating value="2" number="5"></x-star-rating> -/->
-                           <p class="comfort">Comfort</p>
-                           <p class="busyness">Current Traffic</p>
-                           <p class="nearest">Nearest Room</p>
-                        </div>
-                  </div>
-               </div>
-                     
-               <div class="media" id="spot-3">
-                  <div class="media-left">
-                     <a href="">
-                        <img class="media-object" src="http://www.placehold.it/100x100" alt="">
-                     </a>
-                  </div>
-                        <div class="media-body">
-                           <h4 class="media-heading spot-name">Media heading</h4>
-                           <!/-- <x-star-rating value="2" number="5"></x-star-rating> -/->
-                           <p class="comfort">Comfort</p>
-                           <p class="busyness">Current Traffic</p>
-                           <p class="nearest">Nearest Room</p>
-                        </div>
-               </div>
-
-               <div class="media" id="spot-4">
-                  <div class="media-left">
-                     <a href="">
-                        <img class="media-object" src="http://www.placehold.it/100x100" alt="">
-                     </a>
-                  </div>
-                        <div class="media-body">
-                           <h4 class="media-heading spot-name">Media heading</h4>
-                           </!-- <x-star-rating value="2" number="5"></x-star-rating> -/->
-                           <p class="comfort">Comfort</p>
-                           <p class="busyness">Current Traffic</p>
-                           <p class="nearest">Nearest Room</p>
-                        </div>
-               </div>
-
-               <div class="media" id="spot-5">
-                  <div class="media-left">
-                     <a href="">
-                        <img class="media-object" src="http://www.placehold.it/100x100" alt="">
-                     </a>
-                  </div>
-                        <div class="media-body">
-                           <h4 class="media-heading spot-name">Media heading</h4>
-                           <!-/- <x-star-rating value="2" number="5"></x-star-rating> -/->
-                           <p class="comfort">Comfort</p>
-                           <p class="busyness">Current Traffic</p>
-                           <p class="nearest">Nearest Room</p>
-                        </div>
-               </div>
-
-            -->
-      </div> <!--Media holder-->
-
-         </div>
+        <div id="media-holder" class="col-md-4 col-sm-3 col-md-offset-3 "> </div> <!--Media holder-->
+      </div>
    </div> <!-- main container div -->
 
    <!-- This is the nap select modal -->
@@ -244,6 +167,21 @@
       </div>
    </div>
 
+   <div class="modal fade" tabindex="-1" role="dialog" id="finish-modal">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-body">
+                  <div class="row">
+                        <p class='text-center' id = finishText> You finished your nap and earned 20 NapCoins!</p>
+
+               </div>
+            </div>
+            <div class="modal-footer">
+               
+               </div>
+         </div>
+      </div>
+
    <div class="modal fade" tabindex="-1" role="dialog" id="modal-34698011">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -290,6 +228,12 @@
                      Less Comfortable  <x-alarm-rating class="entry-form" value="0" canHighlight="1"></x-alarm-rating>  More Comfortable
                   </h5>
                </div>
+               <div class="form-group">
+                  <label for="rating">Noise</label>
+                  <h5 class="text-center">
+                     More Noisy<x-alarm-rating class="entry-form" value="0" canHighlight="1"></x-alarm-rating> Less Noisy
+                  </h5>
+               </div>
                <button type="submit" id="new-spot-btn" class="btn btn-default">Submit</button>
             </form>
 			</div>
@@ -310,9 +254,6 @@
 
    <script src="js/html-include.js"></script>
 
-   <!--IonIcons-->
-   <script src="js/rating.js"></script>
-
 
    <!--Sorting script-->
    <script src="js/napsort.js"></script>
@@ -323,5 +264,10 @@
 
    <!-- Script for controlling user submission -->
    <script src="js/submitForm.js"></script>
+
+
+   <!--IonIcons-->
+   <script src="js/rating.js"></script>
+
 </body>
 </html>
